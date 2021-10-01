@@ -33,29 +33,27 @@ const QuestionListItem = (props) => {
             <Icon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText
-          primary={`${name}: ${species ? species : "Other"}`}
-          secondary={
-            <React.Fragment>
-              <div>
-                <Typography variant="subtitle2" className={classes.header}>
-                  Description:
-                </Typography>
-                <Typography variant="body2" className={classes.label}>
-                  {description}
-                </Typography>
-              </div>
-              <div>
-                <Typography variant="subtitle2" className={classes.header}>
-                  Guid:
-                </Typography>
-                <Typography variant="body2" className={classes.label}>
-                  {id ? id : "ERROR "}
-                </Typography>
-              </div>
-            </React.Fragment>
-          }
-        />
+        <ListItemText>
+          <React.Fragment>
+            <Typography>{`${name}: ${species ? species : "Other"}`}</Typography>
+            <div>
+              <Typography variant="subtitle2" className={classes.header}>
+                Description:
+              </Typography>
+              <Typography variant="body2" className={classes.label}>
+                {description}
+              </Typography>
+            </div>
+            <div>
+              <Typography variant="subtitle2" className={classes.header}>
+                Guid:
+              </Typography>
+              <Typography variant="body2" className={classes.label}>
+                {id ? id : "ERROR "}
+              </Typography>
+            </div>
+          </React.Fragment>
+        </ListItemText>
       </ListItem>
       {divider && <Divider variant="middle" />}
     </Fragment>
