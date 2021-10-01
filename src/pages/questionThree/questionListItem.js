@@ -19,7 +19,10 @@ const useStyles = makeStyles(() => ({
 }));
 
 const QuestionListItem = (props) => {
-  const { icon, name, species, id, divider, description } = props;
+  const {
+    item: { icon, name, species, id, description },
+    divider,
+  } = props;
   const Icon = icon;
   const classes = useStyles();
   return (
